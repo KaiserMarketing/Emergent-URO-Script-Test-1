@@ -99,7 +99,8 @@ class WaitingRoomDisplay {
             this.switchToSlideshow();
         });
         
-        // Initialize slideshow
+        // Initialize slideshow - start immediately since video is not available
+        this.switchToSlideshow();
         this.startSlideshow();
     }
     
