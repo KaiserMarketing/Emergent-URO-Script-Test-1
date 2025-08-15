@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wartezimmer Anzeige - Medical Waiting Room Display</title>
+    <link rel="stylesheet" href="frontend/style.css">
+</head>
+<body>
+    <!-- Main Display Container -->
+    <div id="display-container">
+        
+        <!-- Media Display (Video/Slideshow) -->
+        <div id="media-container" class="active">
+            <!-- Video Player -->
+            <video id="video-player" autoplay muted loop>
+                <source src="media/idle-video.mp4" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+            
+            <!-- Slideshow Container -->
+            <div id="slideshow-container" style="display: none;">
+                <img id="slideshow-image" src="media/slide1.jpg" alt="Slideshow">
+            </div>
+        </div>
+        
+        <!-- Patient Name Display -->
+        <div id="patient-display" class="hidden">
+            <div id="patient-name-container">
+                <h1 id="patient-name">Patient Name</h1>
+                <p id="patient-subtitle">Bitte kommen Sie zum Behandlungszimmer</p>
+            </div>
+        </div>
+        
+        <!-- Debug Panel (hidden by default) -->
+        <div id="debug-panel" class="debug-hidden">
+            <h3>Debug Controls</h3>
+            <button id="test-trigger-btn">Test Patient Call</button>
+            <button id="toggle-media-btn">Toggle Video/Slideshow</button>
+            <button id="fullscreen-btn">Enter Fullscreen</button>
+            <div id="status-display">
+                <p id="polling-status">Polling: Active</p>
+                <p id="last-check">Last Check: --</p>
+                <p id="trigger-status">Trigger: None</p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Toggle Debug Button -->
+    <button id="debug-toggle" onclick="toggleDebug()">🔧</button>
+    
+    <script src="frontend/app.js"></script>
+</body>
+</html>
