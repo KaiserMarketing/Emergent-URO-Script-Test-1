@@ -13,10 +13,19 @@
         <!-- Media Display (Video/Slideshow) -->
         <div id="media-container" class="active">
             <!-- Video Player -->
-            <video id="video-player" autoplay muted loop>
+            <video id="video-player" autoplay muted loop style="display: none;">
                 <source src="media/idle-video.mp4" type="video/mp4">
-                Your browser does not support video playback.
+                Your browser does not support video playbook.
             </video>
+            
+            <!-- Video Placeholder (shown when no video available) -->
+            <div id="video-placeholder" class="video-placeholder">
+                <div class="placeholder-content">
+                    <h2>🎥 Video Placeholder</h2>
+                    <p>Replace /app/media/idle-video.mp4 with your actual video file</p>
+                    <p>Currently showing slideshow mode</p>
+                </div>
+            </div>
             
             <!-- Slideshow Container -->
             <div id="slideshow-container" style="display: none;">
